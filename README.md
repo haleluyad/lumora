@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lumora (Thoughtfully Chosen, Beautifully Yours)
 
-## Getting Started
+**Lumora** is a modern e-commerce web application built as part of the BE-XPERT Frontend Capstone Project. It provides a clean shopping experience where users can explore products, browse categories, manage their shopping cart, and access their accounts.
 
-First, run the development server:
+🌐 **Live Demo:** [Visit Lumora](https://lumora-topaz-theta.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **Product Browsing:** Explore the product catalog and view individual product details.
+- **Categories:** Browse products by category.
+- **Shopping Cart:** Add items, update quantities, remove products, and view subtotals.
+- **User Authentication:** Register, sign in, and manage your profile.
+- **Checkout Flow:** Access the checkout experience and its related pages.
+- **Admin Dashboard:** Access store management sections for products, categories, and users.
+- **Responsive Design:** Use the application on desktop and mobile screens.
+- **Light and Dark Themes:** Switch between appearance modes.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Theme Management:** next-themes
+- **API:** [EscuelaJS Fake Store API](https://api.escuelajs.co/api/v1)
+- **Deployment:** Vercel
+
+## 🚀 Getting Started
+
+Follow these steps to run Lumora locally.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) installed
+- npm installed
+- Git installed
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/haleluyad/lumora.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd lumora
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env.local` file in the project root and add:
+
+   ```env
+   NEXT_PUBLIC_API_URL=https://api.escuelajs.co/api/v1
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/           # Pages and routes
+│   ├── admin/     # Admin dashboard and management pages
+│   ├── cart/      # Shopping cart
+│   ├── categories/# Product categories
+│   ├── checkout/  # Checkout flow
+│   ├── login/     # Sign-in page
+│   ├── products/  # Product listing and details
+│   ├── profile/   # User profile
+│   └── register/  # Registration page
+├── components/    # Reusable UI and layout components
+├── context/       # Authentication and cart state
+└── lib/           # API and application utilities
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Lumora uses a calm, nature-inspired visual identity with warm neutral backgrounds, forest-green accents, and a clean layout designed to make product discovery feel simple and enjoyable.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📚 Acknowledgments
 
-## Learn More
+- [BE-XPERT](https://be-xpert-store.vercel.app/) — Capstone project reference
+- [EscuelaJS](https://api.escuelajs.co/api/v1) — Product and category API
+- [Next.js](https://nextjs.org/) — React framework
+- [Vercel](https://vercel.com/) — Deployment platform
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with care as part of the BE-XPERT Frontend Capstone Project.
