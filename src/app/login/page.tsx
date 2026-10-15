@@ -23,13 +23,9 @@ function LoginForm() {
     try {
       await login(email.trim(), password);
 
-      const returnTo = searchParams.get("returnTo");
-      const destination =
-        returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//")
-          ? returnTo
-          : "/profile";
+    
+router.push("/");
 
-      router.push(destination);
     } catch (err) {
       setError(
         err instanceof Error

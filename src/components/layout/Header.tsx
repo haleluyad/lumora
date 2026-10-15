@@ -10,6 +10,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, logout, isLoading } = useAuth();
+  const isAdmin = user?.role?.toLowerCase() === "admin";
   const { itemCount } = useCart();
 
   const links = [
@@ -29,17 +30,28 @@ export default function Header() {
           Lumora
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm hover:text-[#527457]"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        
+<nav className="hidden items-center gap-6 md:flex">
+  {links.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      className="text-sm hover:text-[#527457]"
+    >
+      {link.label}
+    </Link>
+  ))}
+
+  {!isLoading && isAdmin && (
+    <Link
+      href="/admin"
+      className="text-sm font-medium text-[#344a39] hover:underline dark:text-green-300"
+    >
+      Admin Panel
+    </Link>
+  )}
+</nav>
+
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
@@ -90,6 +102,15 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {!isLoading && isAdmin && (
+  <Link
+    href="/admin"
+    onClick={() => setMenuOpen(false)}
+    className="font-medium text-[#344a39] dark:text-green-300"
+  >
+    Admin Panel
+  </Link>
+)}
 
           <ThemeToggle />
 
